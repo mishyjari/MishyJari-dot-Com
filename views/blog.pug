@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	h2 Blog
+	each post in posts
+		a(href='/blog/'+post.id)
+			p= post.title
+		p= post.content
+		p= post.postedBy
+		p= post.createdAt
+		p= post.updatedAt
+		a(href='/blog/new') New Post

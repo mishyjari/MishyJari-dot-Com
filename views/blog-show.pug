@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h3 Blog Post!
+	p= post.id
+	p= post.title
+	p= post.content
+	p= post.postedBy
+	p= post.createdAt
+	a(href='/blog/'+post.id+'/edit') Edit Post
